@@ -42,27 +42,11 @@ namespace Assignment5_DollarComputers
         }
         private List<string> getSelectedValue()
         {
-            List<string> hardware = new List<string>
+            List<string> hardware= new List<string>{};
+            for (int i = 0; i <= 30; i++)
             {
-                productDataGridView.SelectedRows[0].Cells[0].Value.ToString(),
-                productDataGridView.SelectedRows[0].Cells[1].Value.ToString(),
-                productDataGridView.SelectedRows[0].Cells[2].Value.ToString(),
-                productDataGridView.SelectedRows[0].Cells[3].Value.ToString(),
-                productDataGridView.SelectedRows[0].Cells[4].Value.ToString(),
-                productDataGridView.SelectedRows[0].Cells[5].Value.ToString(),
-                productDataGridView.SelectedRows[0].Cells[6].Value.ToString(),
-                productDataGridView.SelectedRows[0].Cells[7].Value.ToString(),
-                productDataGridView.SelectedRows[0].Cells[8].Value.ToString(),
-                productDataGridView.SelectedRows[0].Cells[9].Value.ToString(),
-                productDataGridView.SelectedRows[0].Cells[10].Value.ToString(),
-                productDataGridView.SelectedRows[0].Cells[11].Value.ToString(),
-                productDataGridView.SelectedRows[0].Cells[12].Value.ToString(),
-                productDataGridView.SelectedRows[0].Cells[13].Value.ToString(),
-                productDataGridView.SelectedRows[0].Cells[14].Value.ToString(),
-                productDataGridView.SelectedRows[0].Cells[15].Value.ToString()
-            };
-
-
+                hardware.Add(productDataGridView.SelectedRows[0].Cells[i].Value.ToString());
+            }
             return hardware;
         }
 

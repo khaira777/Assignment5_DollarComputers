@@ -26,18 +26,18 @@ namespace Assignment5_DollarComputers
             costTextBox.Text = productDetails[1];
             manufacturerTextBox.Text = productDetails[2];
             modelTextBox.Text = productDetails[3];
-            memoryTextBox.Text = productDetails[4];
-            lcdSizeTextBox.Text = productDetails[5];
-            cpuBrandTextBox.Text = productDetails[6];
-            cpuTypeTextBox.Text = productDetails[7];
-            cpuNumberTextBox.Text = productDetails[8];
-            cpuSpeedTextBox.Text = productDetails[9];
-            conditionTextBox.Text = productDetails[10];
-            platformTextBox.Text = productDetails[11];
-            osTextBox.Text = productDetails[12];
-            hddTextBox.Text = productDetails[13];
-            gpuTextBox.Text = productDetails[14];
-            webCamTextBox.Text = productDetails[15];
+            memoryTextBox.Text = productDetails[5];
+            lcdSizeTextBox.Text = productDetails[7];
+            cpuBrandTextBox.Text = productDetails[10];
+            cpuTypeTextBox.Text = productDetails[11];
+            cpuNumberTextBox.Text = productDetails[13];
+            cpuSpeedTextBox.Text = productDetails[12];
+            conditionTextBox.Text = productDetails[14];
+            platformTextBox.Text = productDetails[16];
+            osTextBox.Text = productDetails[15];
+            hddTextBox.Text = productDetails[17];
+            gpuTextBox.Text = productDetails[19];
+            webCamTextBox.Text = productDetails[30];
 
             nextButton.Enabled = true;
         }
@@ -52,9 +52,9 @@ namespace Assignment5_DollarComputers
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 StreamWriter outputStream = new StreamWriter(saveFileDialog.FileName);
-                    for (int i = 0; i < this.productDetails.Count; i++)
+                    foreach (var t in this.productDetails)
                     {
-                        outputStream.WriteLine(this.productDetails[i]);
+                        outputStream.WriteLine(t);
                     }
                     outputStream.Close();
             }
@@ -72,24 +72,25 @@ namespace Assignment5_DollarComputers
 
             if (result == DialogResult.OK)
             {
-                StreamReader inputStream = new StreamReader(File.Open(openFileDialog.FileName, FileMode.Open));
-                productIdTextBox.Text = inputStream.ReadLine();
+                StreamReader inputStream = new StreamReader(openFileDialog.FileName);
 
-                costTextBox.Text = inputStream.ReadLine();
-                manufacturerTextBox.Text = inputStream.ReadLine();
-                modelTextBox.Text = inputStream.ReadLine();
-                memoryTextBox.Text = inputStream.ReadLine();
-                lcdSizeTextBox.Text = inputStream.ReadLine();
-                cpuBrandTextBox.Text = inputStream.ReadLine();
-                cpuTypeTextBox.Text = inputStream.ReadLine();
-                cpuNumberTextBox.Text = inputStream.ReadLine();
-                cpuSpeedTextBox.Text = inputStream.ReadLine();
-                conditionTextBox.Text = inputStream.ReadLine();
-                platformTextBox.Text = inputStream.ReadLine();
-                osTextBox.Text = inputStream.ReadLine();
-                hddTextBox.Text = inputStream.ReadLine();
-                gpuTextBox.Text = inputStream.ReadLine();
-                webCamTextBox.Text = inputStream.ReadLine();
+                this.productDetails = File.ReadAllLines(openFileDialog.FileName).ToList();
+                productIdTextBox.Text = this.productDetails[0];
+                costTextBox.Text = this.productDetails[1];
+                manufacturerTextBox.Text = this.productDetails[2];
+                modelTextBox.Text = this.productDetails[3];
+                memoryTextBox.Text = this.productDetails[5];
+                lcdSizeTextBox.Text = this.productDetails[7];
+                cpuBrandTextBox.Text = this.productDetails[10];
+                cpuTypeTextBox.Text = this.productDetails[11];
+                cpuNumberTextBox.Text = this.productDetails[13];
+                cpuSpeedTextBox.Text = this.productDetails[12];
+                conditionTextBox.Text = this.productDetails[14];
+                platformTextBox.Text = this.productDetails[16];
+                osTextBox.Text = this.productDetails[15];
+                hddTextBox.Text = this.productDetails[17];
+                gpuTextBox.Text = this.productDetails[19];
+                webCamTextBox.Text = this.productDetails[30];
 
                 inputStream.Close();
 
