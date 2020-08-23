@@ -72,6 +72,7 @@ namespace Assignment5_DollarComputers
 
             if (result == DialogResult.OK)
             {
+                this.Show();
                 StreamReader inputStream = new StreamReader(openFileDialog.FileName);
 
                 this.productDetails = File.ReadAllLines(openFileDialog.FileName).ToList();
@@ -98,8 +99,12 @@ namespace Assignment5_DollarComputers
             }
             else
             {
+                foreach (Form f in Application.OpenForms)
+                {
+                    f.Hide();
+                }
                 Program.selectform.Show();
-                this.Hide();
+                
             }
         }
         private void selectAnotherProductButton_Click(object sender, EventArgs e)
