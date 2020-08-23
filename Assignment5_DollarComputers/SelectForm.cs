@@ -39,10 +39,36 @@ namespace Assignment5_DollarComputers
                     + productDataGridView.SelectedCells[1].Value.ToString();
             }
         }
-
-        private void nextButton_Click(object sender, EventArgs e)
+        private List<string> getSelectedValue()
         {
-            Program.productinfoform.Show();
+            List<string> hardware = new List<string>
+            {
+                productDataGridView.SelectedRows[0].Cells[0].Value.ToString(),
+                productDataGridView.SelectedRows[0].Cells[1].Value.ToString(),
+                productDataGridView.SelectedRows[0].Cells[2].Value.ToString(),
+                productDataGridView.SelectedRows[0].Cells[3].Value.ToString(),
+                productDataGridView.SelectedRows[0].Cells[4].Value.ToString(),
+                productDataGridView.SelectedRows[0].Cells[5].Value.ToString(),
+                productDataGridView.SelectedRows[0].Cells[6].Value.ToString(),
+                productDataGridView.SelectedRows[0].Cells[7].Value.ToString(),
+                productDataGridView.SelectedRows[0].Cells[8].Value.ToString(),
+                productDataGridView.SelectedRows[0].Cells[9].Value.ToString(),
+                productDataGridView.SelectedRows[0].Cells[10].Value.ToString(),
+                productDataGridView.SelectedRows[0].Cells[11].Value.ToString(),
+                productDataGridView.SelectedRows[0].Cells[12].Value.ToString(),
+                productDataGridView.SelectedRows[0].Cells[13].Value.ToString(),
+                productDataGridView.SelectedRows[0].Cells[14].Value.ToString(),
+                productDataGridView.SelectedRows[0].Cells[15].Value.ToString()
+            };
+
+
+            return hardware;
+        }
+
+        private void nextButton_Click_1(object sender, EventArgs e)
+        {
+            ProductInfoForm productInfoForm = new ProductInfoForm(getSelectedValue());
+            productInfoForm.Show();
             this.Hide();
         }
     }

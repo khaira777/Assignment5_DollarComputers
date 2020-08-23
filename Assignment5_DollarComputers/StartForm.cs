@@ -27,5 +27,12 @@ namespace Assignment5_DollarComputers
             Program.selectform.Show();
             this.Hide();
         }
+
+        private void SavedOrderButton_Click(object sender, EventArgs e)
+        {
+            ProductInfoForm productinfoform = new ProductInfoForm();
+            productinfoform.Show();
+            this.Hide();
+        }
     }
 }
