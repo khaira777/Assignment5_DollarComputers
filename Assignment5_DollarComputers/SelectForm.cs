@@ -65,7 +65,7 @@ namespace Assignment5_DollarComputers
             return hardware;
         }
 
-        private void nextButton_Click_1(object sender, EventArgs e)
+        public void nextButton_Click_1(object sender, EventArgs e)
         {
             ProductInfoForm productInfoForm = new ProductInfoForm(getSelectedValue());
             productInfoForm.Show();

@@ -79,5 +79,15 @@ namespace Assignment5_DollarComputers.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vpavic_190102_3148_0023_Edit1 {
+            get {
+                object obj = ResourceManager.GetObject("vpavic_190102_3148_0023_Edit1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

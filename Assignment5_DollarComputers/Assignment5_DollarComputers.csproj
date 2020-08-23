@@ -59,6 +59,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="productDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -95,6 +101,9 @@
     <Compile Include="StartForm.Designer.cs">
       <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProductInfoForm.resx">
       <DependentUpon>ProductInfoForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +164,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Computer-icon.ico" />
+    <None Include="Properties\vpavic_190102_3148_0023_Edit1.jpg" />
     <None Include="Properties\1.jpg" />
     <None Include="Properties\download.jpg" />
   </ItemGroup>

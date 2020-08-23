@@ -72,8 +72,11 @@ namespace Assignment5_DollarComputers
         {
             this.openFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
             DialogResult result = this.openFileDialog.ShowDialog();
-            StreamReader inputStream = new StreamReader(File.Open(openFileDialog.FileName, FileMode.Open));
-            productIdTextBox.Text = inputStream.ReadLine();
+            if(result == DialogResult.OK)
+            {
+                StreamReader inputStream = new StreamReader(File.Open(openFileDialog.FileName, FileMode.Open));
+                productIdTextBox.Text = inputStream.ReadLine();
+
                 costTextBox.Text = inputStream.ReadLine();
                 manufacturerTextBox.Text = inputStream.ReadLine();
                 modelTextBox.Text = inputStream.ReadLine();
@@ -91,6 +94,12 @@ namespace Assignment5_DollarComputers
                 webCamTextBox.Text = inputStream.ReadLine();
 
                 inputStream.Close();
+            }
+            else
+            {
+                Program.selectform.Show();
+                this.Hide();
+            }
         }
 
         private void selectAnotherProductButton_Click(object sender, EventArgs e)
@@ -102,6 +111,13 @@ namespace Assignment5_DollarComputers
         private void selectAnotherProductToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Program.selectform.Show();
+            this.Hide();
+        }
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            OrderForm orderform = new OrderForm(this.productDetails);
+            orderform.Show();
             this.Hide();
         }
     }

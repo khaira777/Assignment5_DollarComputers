@@ -90,7 +90,7 @@
             this.productInfoFormMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.productInfoFormMenuStrip.Name = "productInfoFormMenuStrip";
             this.productInfoFormMenuStrip.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.productInfoFormMenuStrip.Size = new System.Drawing.Size(982, 28);
+            this.productInfoFormMenuStrip.Size = new System.Drawing.Size(982, 26);
             this.productInfoFormMenuStrip.TabIndex = 1;
             this.productInfoFormMenuStrip.Text = "menuStrip1";
             // 
@@ -180,6 +180,7 @@
             this.nextButton.Tag = "Next";
             this.nextButton.Text = "Next";
             this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // cancelButton
             // 

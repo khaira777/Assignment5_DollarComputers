@@ -10,7 +10,7 @@ namespace Assignment5_DollarComputers
     {
         public static StartForm startform;
         public static SelectForm selectform;
-        
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -21,6 +21,7 @@ namespace Assignment5_DollarComputers
             Application.SetCompatibleTextRenderingDefault(false);
             startform = new StartForm();
             selectform = new SelectForm();
+
             Application.Run(new SplashForm());
         }
     }
