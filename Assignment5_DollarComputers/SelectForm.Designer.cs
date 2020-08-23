@@ -85,9 +85,10 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(354, 17);
+            this.label1.Size = new System.Drawing.Size(605, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "You are about to make a computer hardware selection:";
+            this.label1.Text = "You are about to make a computer hardware selection: (click on first column to ma" +
+    "ke selection)";
             // 
             // label2
             // 
@@ -146,13 +147,13 @@
             this.powerDataGridViewTextBoxColumn,
             this.webcamDataGridViewTextBoxColumn});
             this.productDataGridView.DataSource = this.productsBindingSource;
-            this.productDataGridView.Location = new System.Drawing.Point(43, 82);
+            this.productDataGridView.Location = new System.Drawing.Point(15, 81);
             this.productDataGridView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.productDataGridView.Name = "productDataGridView";
             this.productDataGridView.ReadOnly = true;
             this.productDataGridView.RowHeadersWidth = 51;
             this.productDataGridView.RowTemplate.Height = 31;
-            this.productDataGridView.Size = new System.Drawing.Size(800, 400);
+            this.productDataGridView.Size = new System.Drawing.Size(1037, 440);
             this.productDataGridView.TabIndex = 2;
             this.productDataGridView.SelectionChanged += new System.EventHandler(this.productDataGridView_SelectionChanged);
             // 
@@ -448,7 +449,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(40, 539);
+            this.label3.Location = new System.Drawing.Point(12, 539);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 17);
             this.label3.TabIndex = 3;
@@ -456,7 +457,7 @@
             // 
             // selectionTextBox
             // 
-            this.selectionTextBox.Location = new System.Drawing.Point(191, 539);
+            this.selectionTextBox.Location = new System.Drawing.Point(144, 536);
             this.selectionTextBox.Name = "selectionTextBox";
             this.selectionTextBox.ReadOnly = true;
             this.selectionTextBox.Size = new System.Drawing.Size(518, 22);
@@ -464,7 +465,7 @@
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(758, 531);
+            this.cancelButton.Location = new System.Drawing.Point(735, 528);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(132, 39);
             this.cancelButton.TabIndex = 5;
@@ -489,7 +490,7 @@
             // nextButton
             // 
             this.nextButton.Enabled = false;
-            this.nextButton.Location = new System.Drawing.Point(913, 531);
+            this.nextButton.Location = new System.Drawing.Point(885, 528);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(119, 39);
             this.nextButton.TabIndex = 6;

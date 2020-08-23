@@ -10,12 +10,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * Name: Gurkirat Khaira
+ * Student: 301112565
+ * Programming-2
+ * Dollar Computers
+ * Assignment-5
+ */
+
 namespace Assignment5_DollarComputers
 {
     public partial class ProductInfoForm : Form
     {
+        //local list to add all values of the product
         private List<string> productDetails;
 
+        /// <summary>
+        /// This overloading constructor runs when user presses next button on select form.
+        /// In this constructor the details of the products are added to local list
+        ///     and then these values are added to the corresponding textboxes.
+        /// </summary>
+        /// <param name="productDetails"></param>
         public ProductInfoForm(List<string> productDetails)
         {
             this.productDetails = productDetails;
@@ -41,12 +56,23 @@ namespace Assignment5_DollarComputers
 
             nextButton.Enabled = true;
         }
+
+        /// <summary>
+        /// This constructor runs when the user clicks on the open saved order button on start form.
+        /// It performs click on open item of tool strip.
+        /// </summary>
         public ProductInfoForm()
         {
             InitializeComponent();
             this.openToolStripMenuItem.PerformClick();
         }
 
+        /// <summary>
+        /// When the user clicks on save button the application writes all the list items of
+        /// product details list into the file name.(Products.txt is default name) 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
@@ -60,11 +86,18 @@ namespace Assignment5_DollarComputers
             }
         }
 
+        //This exits the application
         private void cancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// When user clicks on the open button on the strip menu
+        /// this method will run and it will
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.openFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
@@ -99,6 +132,7 @@ namespace Assignment5_DollarComputers
             }
             else
             {
+                //This closes all open forms if person clicks cancel and will show select form.
                 foreach (Form f in Application.OpenForms)
                 {
                     f.Hide();
@@ -107,16 +141,19 @@ namespace Assignment5_DollarComputers
                 
             }
         }
+
+        // Takes to select form and close current form.
         private void selectAnotherProductButton_Click(object sender, EventArgs e)
         {
             Program.selectform.Show();
             this.Hide();
         }
 
+        // Show order form and pass the product details list to order form constructor as a list.
         private void nextButton_Click(object sender, EventArgs e)
         {
-            OrderForm orderform = new OrderForm(this.productDetails);
-            orderform.Show();
+            OrderForm orderForm = new OrderForm(this.productDetails);
+            orderForm.Show();
             this.Hide();
         }
     }

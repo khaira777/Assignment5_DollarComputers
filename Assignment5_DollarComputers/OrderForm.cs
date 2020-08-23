@@ -8,11 +8,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * Name: Gurkirat Khaira
+ * Student: 301112565
+ * Programming-2
+ * Dollar Computers
+ * Assignment-5
+ */
+
 namespace Assignment5_DollarComputers
 {
     public partial class OrderForm : Form
     {
+        //local list declared to stored product details
         private List<string> productDetails;
+
+        /// <summary>
+        /// When form is instantiated in product info form, this constructor will add add values of product to list.
+        /// This also add text to textboxes and to List Box with proper formatting.
+        /// This calculates the cost and taxes and display accordingly
+        /// </summary>
+        /// <param name="productDetails"></param>
         public OrderForm(List<string> productDetails)
         {
             InitializeComponent();
@@ -48,6 +64,7 @@ namespace Assignment5_DollarComputers
             totalTextBox.Text = "$" + total.ToString();
         }
 
+        // Takes user to previous form.
         private void backButton_Click(object sender, EventArgs e)
         {
             ProductInfoForm productInfoForm = new ProductInfoForm(productDetails);
@@ -55,11 +72,13 @@ namespace Assignment5_DollarComputers
             this.Hide();
         }
 
+        // Exits the application.
         private void cancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        // Finish button will give message and then exits the application
         private void finishButton_Click(object sender, EventArgs e)
         {
             DialogResult end = MessageBox.Show("Thank you for your business. Your order will be processed in 7 - 10 business days.", "Thank You!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -69,11 +88,13 @@ namespace Assignment5_DollarComputers
             }
         }
 
+        // This will show message that your order is printing.
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Your order is printing...", "Printing", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        // This show details of programmer, version and other stuff.
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Programmer's Name : Gurkirat Khaira\n  Version : 1.0  \n Website:dollarcomputer.ca\n Contact : 6475555555", "About");

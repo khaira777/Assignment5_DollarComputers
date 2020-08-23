@@ -39,7 +39,7 @@
             // NewOrderButton
             // 
             this.NewOrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewOrderButton.Location = new System.Drawing.Point(50, 128);
+            this.NewOrderButton.Location = new System.Drawing.Point(43, 116);
             this.NewOrderButton.Name = "NewOrderButton";
             this.NewOrderButton.Size = new System.Drawing.Size(205, 55);
             this.NewOrderButton.TabIndex = 0;
@@ -50,7 +50,7 @@
             // LoadSavedOrderButton
             // 
             this.LoadSavedOrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoadSavedOrderButton.Location = new System.Drawing.Point(310, 128);
+            this.LoadSavedOrderButton.Location = new System.Drawing.Point(311, 116);
             this.LoadSavedOrderButton.Name = "LoadSavedOrderButton";
             this.LoadSavedOrderButton.Size = new System.Drawing.Size(205, 55);
             this.LoadSavedOrderButton.TabIndex = 1;
@@ -64,7 +64,7 @@
             this.ExitButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitButton.Location = new System.Drawing.Point(185, 208);
+            this.ExitButton.Location = new System.Drawing.Point(185, 189);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(205, 55);
             this.ExitButton.TabIndex = 2;
