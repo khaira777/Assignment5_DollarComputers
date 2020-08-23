@@ -74,21 +74,9 @@ namespace Assignment5_DollarComputers
             MessageBox.Show("Your order is printing...", "Printing", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void backToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ProductInfoForm productInfoForm = new ProductInfoForm(productDetails);
-            productInfoForm.Show();
-            this.Hide();
-        }
-
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(" Name : Gurkirat Khaira\n Student:301112565\n v : 1.0  \n Contact : gkhaira9@my.centennialcollege.ca", "About");
+            MessageBox.Show("Programmer's Name : Gurkirat Khaira\n  Version : 1.0  \n Website:dollarcomputer.ca\n Contact : 6475555555", "About");
         }
     }
 }

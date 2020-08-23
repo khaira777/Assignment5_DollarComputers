@@ -38,16 +38,13 @@ namespace Assignment5_DollarComputers
             hddTextBox.Text = productDetails[13];
             gpuTextBox.Text = productDetails[14];
             webCamTextBox.Text = productDetails[15];
+
+            nextButton.Enabled = true;
         }
         public ProductInfoForm()
         {
             InitializeComponent();
             this.openToolStripMenuItem.PerformClick();
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -72,7 +69,8 @@ namespace Assignment5_DollarComputers
         {
             this.openFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
             DialogResult result = this.openFileDialog.ShowDialog();
-            if(result == DialogResult.OK)
+
+            if (result == DialogResult.OK)
             {
                 StreamReader inputStream = new StreamReader(File.Open(openFileDialog.FileName, FileMode.Open));
                 productIdTextBox.Text = inputStream.ReadLine();
@@ -94,6 +92,8 @@ namespace Assignment5_DollarComputers
                 webCamTextBox.Text = inputStream.ReadLine();
 
                 inputStream.Close();
+
+                nextButton.Enabled = true;
             }
             else
             {
@@ -101,14 +101,7 @@ namespace Assignment5_DollarComputers
                 this.Hide();
             }
         }
-
         private void selectAnotherProductButton_Click(object sender, EventArgs e)
-        {
-            Program.selectform.Show();
-            this.Hide();
-        }
-
-        private void selectAnotherProductToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Program.selectform.Show();
             this.Hide();

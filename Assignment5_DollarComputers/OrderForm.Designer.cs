@@ -81,7 +81,7 @@
             this.orderFormMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.orderFormMenuStrip.Name = "orderFormMenuStrip";
             this.orderFormMenuStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.orderFormMenuStrip.Size = new System.Drawing.Size(897, 28);
+            this.orderFormMenuStrip.Size = new System.Drawing.Size(897, 26);
             this.orderFormMenuStrip.TabIndex = 1;
             this.orderFormMenuStrip.Text = "menuStrip1";
             // 
@@ -107,7 +107,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -123,7 +123,7 @@
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
             this.backToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.backToolStripMenuItem.Text = "Back";
-            this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.backButton_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -451,6 +451,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(897, 509);
+            this.ControlBox = false;
             this.Controls.Add(this.laptopPictureBox);
             this.Controls.Add(this.finishButton);
             this.Controls.Add(this.cancelButton);
@@ -459,6 +460,7 @@
             this.Controls.Add(this.systemComponentsGroupBox);
             this.Controls.Add(this.orderFormMenuStrip);
             this.Name = "OrderForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderForm";
             this.orderFormMenuStrip.ResumeLayout(false);
             this.orderFormMenuStrip.PerformLayout();

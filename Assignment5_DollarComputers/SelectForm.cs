@@ -37,6 +37,7 @@ namespace Assignment5_DollarComputers
                 selectionTextBox.Text = productDataGridView.SelectedCells[2].Value.ToString() + " "
                     + productDataGridView.SelectedCells[3].Value.ToString() + " Priced at: "
                     + productDataGridView.SelectedCells[1].Value.ToString();
+                nextButton.Enabled = true;
             }
         }
         private List<string> getSelectedValue()
